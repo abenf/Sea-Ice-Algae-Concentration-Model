@@ -1,3 +1,6 @@
+# Project untracked files/patterns
+
+# Andrew's local untracked files/patterns
 dependencies/update_dependency_lists.sh
 notes bda450.txt
 update_dependency_lists.py
