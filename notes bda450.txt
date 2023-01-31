@@ -1,0 +1,91 @@
+pattern recogntion type things
+
+Large and obvious patterns
+
+Is the camera gain detection information reproducable?
+	gain settings questions in general
+	should be evenly transformed across rgb
+
+future experiments
+	flow cam (microscopic pictures)
+
+
+light intensity
+
+chlorofil concentration
+
+
+Dr. Hill filters out the solar spectrum
+
+
+snow from storm AND blown in
+	could extrapolate atmospheric data from reanalysis
+
+can get ice concentration from satelite ( course resolution)
+can get wind speed
+can get atmospheric pressure
+
+NOAA station at Barrow might have similar conditions (lots of atmospheric measurements)
+
+predicting biomass is key
+light data with camera would be good for modeling, followed by nutrients
+temperature is not a driver of biomass activity
+
+chlorophil (expensive) measured with flourometer.
+better to just measure light.
+
+useful to compare all buoys together
+	eg. same light different growth
+	possible to predict what was different
+
+sometimes buoys can get salinity readings.
+
+Key questions:
+	is light switching on earlier in the year? ( delta ice depth, snow thickness ==> more 	light?)
+
+simulate absent data from past years.
+
+
+light measurement:
+	if measuring indiv. wavelengths: photons
+	if measuring photosynthetically available information: watts
+
+chlorophil mesaurement:
+	mm cph / cubic meter
+
+salinity
+	psu
+
+temp
+	C
+
+
+No big difference in equipment between the experiments.
+
+
+difference in buoys: where they went/drifted to. sensors are consistent
+
+
+melt pond lets through more light than plain ice; "a window"
+	an indication that the ice beneath is going to melt out
+	sometimes you wouldnt get enough light for biomass growth til melt ponds gave out
+
+images: bright spots in ice are melt ponds: don't necesarily need to account for them outside of seeing them in the imagery.
+
+
+Dr. Hill is interested in phytoplankton as a measure of productivity of a system
+easy to see from space
+easy to measure in the water
+
+you can look at how much light theyre getting
+you can observe them as a light sink, blocking light further down the water column.
+light is the big thing
+
+different over time?
+do we see earlier phytoplankton blooms becasue more light, thinner ice?
+do they adapt? or are less flexible?
+do subartic species replace them?
+
+change in timing? magnitude? has long reaching effects on the food chain.
+case in point: snow crabs in the bearing sea.
+
