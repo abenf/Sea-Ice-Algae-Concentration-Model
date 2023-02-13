@@ -2,7 +2,8 @@
 	"data_info":[
         {
             "id": "B1",
-            "path": "./Buoy_WB01_data.csv",
+            "data_path": "./data/Buoy_WB01_data.csv",
+            "im_directory_path": "./images/Buoy#1",
             "cols": [
                 "DataDateTime",
                 "GPSLatitude",
@@ -65,7 +66,8 @@
                 ]},
         {
             "id": "B3",
-            "path": "./Buoy_WB03_data.csv",
+            "data_path": "./data/Buoy_WB03_data.csv",
+            "im_directory_path": "./images/Buoy#3",
             "cols": [
                 "DataDateTime",
                 "GPSLatitude",
@@ -100,7 +102,8 @@
                 ]},
         {
             "id": "B4",
-            "path": "./Buoy_WB04_data.csv",
+            "data_path": "./data/Buoy_WB04_data.csv",
+            "im_directory_path": "./images/Buoy#4",
             "cols": [
                 "DataDateTime",
                 "GPSLatitude",
@@ -161,7 +164,8 @@
                 ]},
         {
             "id": "B6",
-            "path": "./Buoy_WB06_data.csv",
+            "data_path": "./data/Buoy_WB06_data.csv",
+            "im_directory_path": "./images/Buoy#6",
             "cols": [
                 "DataDateTime",
                 "GPSLatitude",
@@ -216,7 +220,8 @@
                 ]},
         {
             "id": "B7",
-            "path": "./Buoy_WB07_data.csv",
+            "data_path": "./data/Buoy_WB07_data.csv",
+            "im_directory_path": "./images/Buoy#7",
             "cols": [
                 "DataDateTime",
                 "GPSLatitude",
@@ -265,7 +270,8 @@
                 ]},
         {
             "id": "B8",
-            "path": "./Buoy_WB08_data.csv",
+            "data_path": "./data/Buoy_WB08_data.csv",
+            "im_directory_path": "./images/Buoy#8",
             "cols": [
                 "DataDateTime",
                 "GPSLatitude",
@@ -318,5 +324,5 @@
                 "ECO_695Chl",
                 "Cyclops_Chl"
             ]}],
-	"names": null
+	"names": {"test_old": "test_new"}
 }

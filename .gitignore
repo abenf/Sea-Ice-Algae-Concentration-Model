@@ -4,3 +4,5 @@
 dependencies/update_dependency_lists.sh
 notes bda450.txt
 update_dependency_lists.py
+clean/cleaning_notebook.ipynb
+clean/names
