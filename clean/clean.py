@@ -38,10 +38,11 @@ import pandas as pd
 import numpy as np
 import json
 
-DATA_INFO_PATH  : str = "./data_info.json"
-DATA_INFO       : dict[str, Any] = {}
-DATASETS        : dict[str, pd.DataFrame] = {}
-IMAGE_SETS      : dict[str, np.ndarray[int]] = {}
+DATA_INFO_PATH      : str = "./data_info.json"
+IMAGE_DETAILS_PATH  : str = "../data/WarmBuoys_Image_details.xlsx"
+DATA_INFO           : dict[str, Any] = {}
+DATASETS            : dict[str, pd.DataFrame] = {}
+IMAGE_SETS          : dict[str, list[np.ndarray[int]]] = {}
 
 def set_DATA_INFO_PATH(path: str) -> None:
     """
@@ -77,50 +78,66 @@ def read_data_from_info() -> None:
 
         DATASETS.update({id: df})
 
+def get_image_details(
+        xlsx: pd.ExcelFile, dataset: dict[str, Any]) -> pd.DataFrame:
+    """
+    Extract image details from excel file and store as DataFrame.
+    """
+    # f'#{n}', corresponding to buoy number n
+    current_sheet = dataset["im_directory_path"][-2:-1] 
+    im_details = pd.read(xlsx, current_sheet)
+    return im_details
+
 def read_images_from_info() -> None:
     """
     Load image data corresponding to each .csv file into numpy arrays and
     store in IMAGE_SETS by 'id'.
 
-    Based on DATA_INFO; each set stored by 'id' in a dictionary, DATASETS.
-    Images are decomposed into numeric height/width/channels data.
+    Based on DATA_INFO; if image has available details in the .xlsx file 
+    stored at IMAGE_DETAILS_PATH, then for each set stored by 'id' in a 
+    dictionary, `DATASETS`, Images are decomposed into numeric 
+    height/width/channels data.
     """
     data_info, names = tuple(DATA_INFO.values())
+    xlsx = pd.ExcelFile(IMAGE_DETAILS_PATH)
     for dataset in data_info:
         id = dataset["id"]
         im_directory_path = dataset["im_directory_path"]
+        im_details = get_image_details(xlsx, dataset)
+        im_set = []
+
         im_directory = scandir(im_directory_path)
-        ims = [np.array(Image.open(im.path)) for im in im_directory]
+        for im in im_directory:
+            # check that image details are present (unusable if not present)
+            im_details_present: bool = im_details.isin({'Filename': im.name})
+            if im_details_present:
+                im_array = np.array(Image.open(im.path))
+                im_set.append(im_array)
         
-        IMAGE_SETS.update({id: ims})
+        IMAGE_SETS.update({id: im_set})
 
 def cat_data_with_images() -> None:
     """Merge image data with numeric data into various configurations."""
     pass
 
-def full_sets() -> None:
+def all_observations() -> pd.DataFrame:
     """Include all numeric readings."""
     pass
 
-def average_sets(avging_radius: int=2) -> None:
+def average_observations(avg_radius: int) -> pd.DataFrame:
     """
-    Include averaged measurements of the `avging_radius` observations below 
+    Include averaged measurements of the `avg_radius` observations below 
     to the `avging_radius`obervations above the observation corresponding to 
     approximate solar noon.
 
     parameters:
-        avging_radius (int): Default value is 2; the radius of observations to 
-        average with the observation closest to best approximations of solar
-        noon at the center.
+        avg_radius (int): the radius of observations to average with the 
+        observation closest to best approximations of solarnoon at the center.
     """
     pass
 
-def image_datetime_only_sets() -> None:
-    """Include numeric data that corresponds to approximate solar noon."""
-    pass
-
-def export_csvs() -> None:
-    """Export cleaned and concatenated data sets."""
+def image_observations() -> pd.DataFrame:
+    """Include only numeric data that corresponds to approximate solar noon."""
     pass
 
 def main():
@@ -128,7 +145,6 @@ def main():
     read_data_from_info()
     read_images_from_info()
     cat_data_with_images()
-    export_csvs()
 
 if __name__ == "__main__":
     main()

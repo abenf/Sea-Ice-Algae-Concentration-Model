@@ -6,3 +6,5 @@ notes bda450.txt
 update_dependency_lists.py
 clean/cleaning_notebook.ipynb
 clean/names.txt
+data/buoy_all_data.xlsx
+data/OneDrive_1_3-4-2023.zip
