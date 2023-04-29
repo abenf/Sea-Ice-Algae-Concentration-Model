@@ -64,7 +64,7 @@ IMAGE_SETS          : dict[str, pd.DataFrame] = {}
 
 TRANSFORMED_DATA    : pd.DataFrame = None
 
-def run_clean(mmcq_quality: int=1) -> None:
+def run_clean(mmcq_quality: int=1, export_csv=True) -> None:
     """
     Cleaning script; ingest data_info.json, ingest, clean, and rename data
     .csv's, open and store .jpg's as arrays.
@@ -73,7 +73,8 @@ def run_clean(mmcq_quality: int=1) -> None:
     read_data_from_info()
     read_images_as_PIL_objs()
     transform_data_for_modeling(mmcq_quality)
-    export_csv_files()
+    if export_csv:
+        export_csv_files()
 
 def load_data_info() -> None:
     """
