@@ -1,6 +1,6 @@
 # Modeling Arctic Sea-Ice Algae Data
 
-The presence and intensity of algal blooms beneath arctic ice sheets is modeled using RGB image data across two sepearte studies.
+The presence and intensity of algal blooms beneath arctic ice sheets is modeled using RGB image data gathered across two studies.
 
 ## Repeating Model Building...
 Build the environment in the local directory where you've stored the project using either `environment.yml` or `requirments.txt` located in the `dependencies` directory.
