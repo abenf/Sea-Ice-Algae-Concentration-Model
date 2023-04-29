@@ -2,8 +2,8 @@
 	"data_info":[
         {
             "id": "WB-I-0001",
-            "data_path": "./data/Buoy_WB01_data.csv",
-            "im_directory_path": "./images/Buoy#1",
+            "data_path": "data/Buoy_WB01_data.csv",
+            "im_directory_path": "images/Buoy#1/",
             "cols": [
                 "DataDateTime",
                 "GPSLatitude",
@@ -17,7 +17,6 @@
                 "TempPod3",
                 "TempPod4",
                 "TempPod5",
-                "TempPod6",
                 "TempPod7",
                 "PressPod1",
                 "PressPod2",
@@ -54,8 +53,8 @@
                 ]},
         {
             "id": "WB-I-0003",
-            "data_path": "./data/Buoy_WB03_data.csv",
-            "im_directory_path": "./images/Buoy#3",
+            "data_path": "data/Buoy_WB03_data.csv",
+            "im_directory_path": "images/Buoy#3/",
             "cols": [
                 "DataDateTime",
                 "GPSLatitude",
@@ -90,8 +89,8 @@
                 ]},
         {
             "id": "WB-I-0004",
-            "data_path": "./data/Buoy_WB04_data.csv",
-            "im_directory_path": "./images/Buoy#4",
+            "data_path": "data/Buoy_WB04_data.csv",
+            "im_directory_path": "images/Buoy#4/",
             "cols": [
                 "DataDateTime",
                 "GPSLatitude",
@@ -140,8 +139,8 @@
                 ]},
         {
             "id": "WB-I-0006",
-            "data_path": "./data/Buoy_WB06_data.csv",
-            "im_directory_path": "./images/Buoy#6",
+            "data_path": "data/Buoy_WB06_data.csv",
+            "im_directory_path": "images/Buoy#6/",
             "cols": [
                 "DataDateTime",
                 "GPSLatitude",
@@ -192,8 +191,8 @@
                 ]},
         {
             "id": "WB-I-0007",
-            "data_path": "./data/Buoy_WB07_data.csv",
-            "im_directory_path": "./images/Buoy#7",
+            "data_path": "data/Buoy_WB07_data.csv",
+            "im_directory_path": "images/Buoy#7/",
             "cols": [
                 "DataDateTime",
                 "GPSLatitude",
@@ -242,8 +241,8 @@
                 ]},
         {
             "id": "WB-I-0008",
-            "data_path": "./data/Buoy_WB08_data.csv",
-            "im_directory_path": "./images/Buoy#8",
+            "data_path": "data/Buoy_WB08_data.csv",
+            "im_directory_path": "images/Buoy#8/",
             "cols": [
                 "DataDateTime",
                 "GPSLatitude",
